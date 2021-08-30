@@ -37,7 +37,7 @@ return 21
 else 22
 $ 23
 
-Para obtener una mejor interaccion con mi proyecto decidi agregar una interfaz grafica sencilla que en el transcurso de la elavoracion de mi proyecto tendra diferentes
+Para obtener una mejor interaccion con mi proyecto decidi agregar una interfaz grafica sencilla que en el transcurso de la elaboracion de mi proyecto tendra diferentes
 mejoras. Por el momento mi interfaz cuenta con una ventana que tiene un Textedit para recibir entradas de simbolos, tiene un PushButton para activar el analisis de los simbolos,
 y por ultimo tiene un Tablewidget donde se muestran los simbolos de entrada ya analizados.
 
