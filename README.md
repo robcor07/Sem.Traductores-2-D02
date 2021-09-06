@@ -1,46 +1,32 @@
 # Sem.Traductores-2-D02
 Coronel Gonzalez Roberto Manuel 
 214771077
-hola
 
-Etapa del proyecto analizador léxico completo.
+
+Mini analizador Sintactico.
 
 Este proyecto fue desarollado usado el lenguaje de programacion c++ y el compilador Qt.
 
-Este es el reporte de la primera estapa de mi proyecto (compilador). Esta primera etapa corresponde a un analizador lexico el cual recibe simbolos los cuales
-debe analizar e identificar correctamente a base de criterios previamente establecidos. En total son 24 diferentes tipos de simbolos los que mi analizador lexico debe 
-identificar y a la vez es necesario asignarle su numero de tipo correspondiente (del 0 al 23). Este programa inicia con la obtencion de varios simbolos a analizar y se analiza
-character a character usuando un automata el cual identifica el tipo de simbolo y una vez que todos los simbolos son analizados se muestran los resultados obtenidos del analisis.
+Este es el reporte de la segunda estapa de mi proyecto (compilador). Esta segunda etapa consta en la implementacion de dos ejemplos de tablas de gramaticas para la implementacion del analisis sintacticos en dos ejemplos. Los ejmplos a analizar son hola+mundo$ y a+b+c+d+e+f$ cada uno con su tabla de gramatica diferente. Fue necesaria la implementacion de una pila para llevar acabo el avance del analisis sintactico(la pila se inicializa con un 0).
 
-Símbolo Tipo
-identificador 0
-entero 1
-real 2
-cadena 3
-tipo 4 int,float,void
-opSuma 5 +,-
-opMul 6 *,/
-opRelac 7 <,<=,>,>=
-opOr 8 ||
-opAnd 9 &&
-opNot 10 !
-opIgualdad 11 ==, !=
-; 12
-, 13
-( 14
-) 15
-{ 16
-} 17
-= 18
-if 19
-while 20
-return 21
-else 22
-$ 23
+Tabla 1 con gramatica E -> <id> + <id>
+d2,0,0,1,
+0,0,r0,0,
+0,d3,0,0,
+d4,0,0,0,
+0,0,r1,0
 
-Para obtener una mejor interaccion con mi proyecto decidi agregar una interfaz grafica sencilla que en el transcurso de la elaboracion de mi proyecto tendra diferentes
-mejoras. Por el momento mi interfaz cuenta con una ventana que tiene un Textedit para recibir entradas de simbolos, tiene un PushButton para activar el analisis de los simbolos,
-y por ultimo tiene un Tablewidget donde se muestran los simbolos de entrada ya analizados.
+Tabla 2 con gramatica r1 E -> <id> + E | <id> y r2 E ->e
+d2,0,0,1,
+0,0,r0,0,
+0,d3,r2,0,
+d2,0,0,4,
+0,0,r1,0
+
+En esta etapa agregue dos pushbuttons a mi interfaz uno para cada ejercicio.
+  
+Las tablas de gramaticas contienen desplazamientos,reglas y 0's. Cuando se encuentra un desplazamiento
+se agrega el elemento analizado y el desplazamiento a la pila. Cuando se encuentra una regla se libera el espacio correspondiente en la pila y se agrega una E, inmediatamente se vuelve a checar la tabla con los dos ultimos valores de la pila para agregar un nuevo elemento a la pila.Se obtiene un error de gramatica cuando se ob tiene un 0 en la tabla. El objetivo del analisis sintactico es analizar los simbolos obtenidos a base de la tabla de gramatica hasta encontrar un error o una regla r0 lo cual indica que la gramatica es correcta.
 
 
 
