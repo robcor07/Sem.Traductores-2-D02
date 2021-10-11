@@ -14,9 +14,15 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+     QString vec[100][3];
+     int auxvec;
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_Ejercicio1_clicked();
+
+    void on_Ejercicio2_clicked();
 
 private:
     Ui::MainWindow *ui;
