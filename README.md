@@ -12,3 +12,5 @@ Este es el reporte de la estapa de la gramatica del compilador. Para esta etapa 
 
 
 ![Example](https://user-images.githubusercontent.com/88813815/145701460-3e80f530-f20c-44c4-a404-66f6e2869af0.png)
+![Example2](https://user-images.githubusercontent.com/88813815/145701594-5d560378-d2ed-4253-9b6a-911fc7d0660e.png)
+![example3](https://user-images.githubusercontent.com/88813815/145701597-56927e68-0f46-4cdc-9729-da5adb4bb6e1.png)
